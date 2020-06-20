@@ -2,11 +2,12 @@
   ## 以pycharm为例，其他可参照执行
       cd /usr/share/applications
       sudo gedit pycharm.desktop
-          [Desktop Entry]
-          Type=Application
-          Name=Pycharm
-          Icon=/opt/pycharm-2020.1.2/bin/pycharm.png
-          Exec=sh /opt/pycharm-2020.1.2/bin/pycharm.sh
+          [Desktop Entry]                                     # 声明
+          Type=Application                                    # 类型
+          Name=Pycharm                                        # 名称
+          Icon=/opt/pycharm-2020.1.2/bin/pycharm.png          # 图标
+          Exec=sh /opt/pycharm-2020.1.2/bin/pycharm.sh        # 程序
+          Categories=Development                              # 分类
 # 详解
 ## 概念
     Desktop Entry 文件是 Linux 桌面系统中用于描述程序启动配置信息的文件，它以 .desktop 为后缀名，相当于微软 Windows 系统下的桌面快捷方式。通常一个二进制可执行程序是一个没有后缀没有图标的文件，不可以随意移动。如果没有 desktop 文件，用户每次都需要打开一层层文件夹最后找到这个可执行文件，然后启动应用。这样打开应用的方式没有问题，但特别繁琐，而且可执行文件分布散乱，不易于管理。
@@ -41,18 +42,8 @@
 ## Categories 参数
     desktop 支持的参数远远不止上诉4个，在 deepin 系统还有一个比较常用的参数就是 Categories。
     Categories: 用于指定应用的分类（如果缺省则分类到其他应用）。
-    我们打开启动器并切换到分类视图，可以看到刚刚添加到 CLion 被分类到其他应用了，但是我们想让他分到分类里面。
-    解析Deepin Linux系统中的Desktop文件，附实例讲解
+    我们打开启动器并切换到分类视图，可以看到刚刚添加到被分类到其他应用了，但是我们想让他分到分类里面。
     deepin 启动器将所有应用分为10类，分别是网络应用、社交沟通、音乐欣赏、视频播放、图形图像、办公学习、阅读翻译、编程开发、系统管理和其他应用：
-    解析Deepin Linux系统中的Desktop文件，附实例讲解
-    下面我们修改 clion.desktop 文件，使 deepin 启动器能够正确地将 CLion 分类为编程开发：
-    sudo gedit /usr/share/applications/clion.desktop
-    在最后一行增加 Categories=Development 并保存：
-    解析Deepin Linux系统中的Desktop文件，附实例讲解
-    再打开启动器，可以发现 CLion 已经被正确地分类为编程开发分类下：
-    解析Deepin Linux系统中的Desktop文件，附实例讲解
-
- 
 
 ## 附表：Categories 对照表
   | Categories | 分类 | 
