@@ -55,15 +55,15 @@
  
 
 ## 附表：Categories 对照表
-    | Categories | 分类 |
-    | ------ | ------ |
-    |network|网络应用|
-    |Chat|社交沟通|
-    |Audio|音乐欣赏|
-    |Video|视频播放|
-    |Graphics|图形图像|
-    |Office|办公学习|
-    |Translation|阅读翻译|
-    |Development|编程开发|
-    |Utility|系统管理|
+    | Categories | 分类 | 
+    | ------ | ------ | 
+    | network | 网络应用 | 
+    | Chat | 社交沟通 | 
+    | Audio | 音乐欣赏 | 
+    | Video | 视频播放 | 
+    | Graphics | 图形图像 | 
+    | Office | 办公学习 | 
+    | Translation | 阅读翻译 | 
+    | Development | 编程开发 | 
+    | Utility | 系统管理 | 
 
