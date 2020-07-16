@@ -24,3 +24,24 @@
                在右边窗口空白处右键 ===》新建一个  QWORD （64位值）
                名字叫 RealTimeIsUniversal 然后确认
                双击它将值改为 1 回车 其它不要操作
+## Mysql Error
+       Error1: mysql安装后没有密码。
+       Solve1：首先确保mysql服务已经启动。启动命令： service mysql start
+               然后直接无密码登录： mysql -uroot -p   然后弹出要输入密码的命令： 直接回车跳过。
+               进入mysql。
+               在mysql中执行如下命令。
+               use mysql；
+               update user set password=password('密码') where user='root';                  #如果此条命令报错，可以执行替换命令： 
+               替换命令（无错不执行)
+               update mysql.user set authentication_string=password('新密码') where user='root';        #如果此条命令报错，继续执行下一行替换命令：
+               替换命令2（无错不执行）
+               set password for 用户名@localhost = password('新密码');                    #如果三条都执行了还是报错，那么请看Solve2。
+               执行完成后刷新权限：
+               flush privileges;
+               退出重新登录即可。
+       Solve2: 同样需要先保证mysql服务已经启动。service mysql start
+               执行如下命令： 
+               mysqladmin -uroot password '密码'
+               执行完成后直接登录即可。
+
+
