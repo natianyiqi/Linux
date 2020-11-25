@@ -1,1 +1,8 @@
 sudo yum install python-devel
+或 sudo yum install python3-devel
+
+
+
+Ubuntu解决办法为： 
+sudo apt-get install python-dev
+或 sudo apt-get install python3-dev
