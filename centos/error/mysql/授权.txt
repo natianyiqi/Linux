@@ -1,0 +1,6 @@
+mysql 5.x
+ GRANT ALL PRIVILEGES ON *.* TO 'aaaa'@'localhost' IDENTIFIED BY 'password';  // 可以直接创建用户
+
+mysql 8.x
+ CREATE USER 'aaaa'@'localhost' IDENTIFIED BY 'password';
+ GRANT ALL PRIVILEGES ON *.* TO 'aaaa'@'localhost';
