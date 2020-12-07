@@ -1,0 +1,2 @@
+初始化：systemctl start mariadb.service
+       mysql_secure_installation或 mysqladmin -uroot password 设置初始化密码
